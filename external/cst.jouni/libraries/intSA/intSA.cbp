@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="intSA"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\libraries\;CMake Files\libraries\TextIndexes\;CMake Files\libraries\libcds2\;CMake Files\libraries\intSA\;CMake Files\libraries\gtest-1.7.0\;CMake Files\libraries\gtest-1.7.0\cmake\;CMake Files\cst_rep\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="testIntSA">
+				<Option output="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/testIntSA" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/includes"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/../gtest-1.7.0"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/../gtest-1.7.0/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/Makefile&quot;  VERBOSE=1 testIntSA"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="testIntSA/fast">
+				<Option output="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/testIntSA" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/includes"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/../gtest-1.7.0"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/../gtest-1.7.0/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/Makefile&quot;  VERBOSE=1 testIntSA/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/tests/testIntSA.cpp">
+			<Option target="testIntSA"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/TextIndexes/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libraries\TextIndexes\"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libraries\libcds2\"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libraries\intSA\"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/gtest-1.7.0/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libraries\gtest-1.7.0\"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/gtest-1.7.0/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\libraries\gtest-1.7.0\cmake\"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/cst_rep/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cst_rep\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

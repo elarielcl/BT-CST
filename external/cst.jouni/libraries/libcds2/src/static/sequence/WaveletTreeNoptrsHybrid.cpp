@@ -1,0 +1,615 @@
+/* WaveletTreeNoptrsHybrid.cpp
+ * Copyright (C) 2008, Francisco Claude.
+ * Copyright (C) 2011, Matthias Petri.
+ *
+ *
+ * WaveletTreeNoptrsHybrid definition
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ *
+ */
+
+#include <sequence/WaveletTreeNoptrsHybrid.h>
+
+namespace cds_static
+{
+	
+	uint *driller;
+	uint pDriller;
+	uint levelDriller;
+	
+	WaveletTreeNoptrsHybrid::WaveletTreeNoptrsHybrid(uint * symbols, size_t n, BitSequenceBuilder **bmb, uint nbmb, Mapper * am, bool deleteSymbols) : Sequence(n) {
+		for (uint i=0;i<nbmb;i++)
+			bmb[i]->use();
+		this->n = n;
+		this->am = am;
+		am->use();
+		for(uint i = 0; i < n; i++)
+			symbols[i] = am->map(symbols[i]);
+		max_v = max_value(symbols, n);
+		height = bits(max_v);
+		cerr << "Max_v: " << max_v << endl;
+		OCC = new uint[max_v + 2];
+		for (uint i = 0; i <= max_v + 1; i++)
+			OCC[i] = 0;
+		for (uint i = 0; i < n; i++)
+			OCC[symbols[i] + 1]++;
+
+		uint to_add = 0;
+		for (uint i = 1; i <= max_v + 1; i++)
+			if (OCC[i] == 0) to_add++;
+
+		uint * new_symb = new uint[n + to_add];
+		for (uint i = 0; i < n; i++)
+			new_symb[i] = symbols[i];
+
+		if (deleteSymbols) {
+			delete [] symbols;
+			symbols = 0;
+		}
+
+		to_add = 0;
+		for (uint i = 1; i <= max_v + 1; i++)
+		if (OCC[i] == 0) {
+			OCC[i]++;
+			new_symb[n + to_add] = i - 1;
+			to_add++;
+		}
+
+		uint new_n = n + to_add;
+		for(uint i = 1;i <= max_v + 1; i++)
+			OCC[i] += OCC[i - 1];
+		this->n = new_n;
+
+		uint **_bm = new uint*[height];
+		for(uint i = 0; i < height; i++) {
+			_bm[i] = new uint[new_n / W + 1];
+			for(uint j = 0; j < new_n / W + 1; j++)
+				_bm[i][j] = 0;
+		}
+		
+
+
+		driller = new uint[new_n];
+		pDriller=0;
+		
+		levelDriller=height-5;
+		cerr << "level driller: " << levelDriller << endl;
+		build_level(_bm, new_symb, 0, new_n, 0);
+		bitstring = new BitSequence*[height];
+		assert(pDriller==new_n);
+		
+		uint *concatBmps = NULL;
+		createEmptyBitmap(&concatBmps,uint_len(new_n,7));
+		/*uint p=0;
+		for (uint i=0;i<7;i++){
+			for (uint j=0;j<new_n;j++){
+				if (bitget(_bm[i],j))
+					bitset(concatBmps,p);
+				p++;
+			}
+		}*/
+		//BitSequence *proba = bmb[0]->build(concatBmps,new_n*2);
+		//cerr << "proba bpc: " << (double)proba->getSize()*8/(new_n*2) << endl;
+		Sequence *S = NULL;//new SequenceRepairSC(driller,new_n,new BitSequenceBuilderRRR(32),new MapperNone(),new PermutationBuilderMRRR(5,new BitSequenceBuilderRG(10)),8,4,8u);
+		uint maxSeqs=0;
+		//for (uint i=0;i<new_n;i++)
+			//maxSeqs = max(maxSeqs,driller[i]);
+		//cerr << "maxSeqS: " << maxSeqs << endl;
+		//cerr << "S size: " << (double)S->getSize()*8/n << endl;
+		delete  S;
+		uint totalSize = 0;
+		double totalbpc=0;
+		for (uint i = 0; i < height; i++) {
+			//~ cerr << "Level-i: " << i << ", n: " << n << ", new_n: " << new_n << endl;
+			cerr << "Level-i: " << i ;
+			uint best=0;
+			bitstring[i] = bmb[0]->build(_bm[i],new_n);
+			
+			for (uint j=1;j<nbmb;j++){
+				BitSequence *tmp  = bmb[j]->build(_bm[i],new_n);
+				//~ cerr << "Ratio: " <<(double)tmp->getSize()/bitstring[i]->getSize() << endl;
+				
+				if (tmp->getSize()<bitstring[i]->getSize()){
+					BitSequence *tmp2 = bitstring[i];
+					bitstring[i] = tmp;
+					best = j;
+					delete tmp2;
+				}else{
+					delete tmp;
+				}
+				//~ delete bitstring[i];
+			}
+			//~ cerr << "Best at level " << i << " is the number " << best << endl;
+				
+			cerr << "bpc: " << (double)bitstring[i]->getSize()*8/new_n << endl;
+			totalbpc+=(double)bitstring[i]->getSize();
+				totalSize+=bitstring[i]->getSize();
+				
+			delete [] _bm[i];
+		}
+		cerr << "total bpc: " << totalbpc*8/new_n << endl;
+		//~ cerr << "Total size: " << totalSize << endl;
+		delete [] _bm;
+
+		if (!deleteSymbols)
+			for(uint i = 0; i < n; i++)
+				symbols[i] = am->unmap(symbols[i]);
+
+		for (uint i=0;i<nbmb;i++)
+			bmb[i]->unuse();
+	}
+
+	WaveletTreeNoptrsHybrid::WaveletTreeNoptrsHybrid():Sequence(0) {
+		bitstring = NULL;
+		OCC = NULL;
+		am = NULL;
+	}
+
+	WaveletTreeNoptrsHybrid::~WaveletTreeNoptrsHybrid() {
+		if (bitstring) {
+			for (uint i = 0; i < height; i++)
+				if (bitstring[i])
+					delete bitstring[i];
+			delete [] bitstring;
+		}
+		delete [] OCC;
+		if (am)
+			am->unuse();
+	}
+
+	void WaveletTreeNoptrsHybrid::save(ofstream & fp) const
+	{
+		uint wr = WVTREE_NOPTRS_HDR;
+		saveValue(fp, wr);
+		saveValue<size_t>(fp,n);
+		saveValue(fp, max_v);
+		saveValue(fp, height);
+		am->save(fp);
+		for (uint i = 0; i < height; i++)
+			bitstring[i]->save(fp);
+		saveValue<uint>(fp, OCC, max_v + 2);
+	}
+
+	WaveletTreeNoptrsHybrid * WaveletTreeNoptrsHybrid::load(ifstream & fp) {
+		uint rd = loadValue<uint>(fp);
+		if (rd != WVTREE_NOPTRS_HDR) return NULL;
+		WaveletTreeNoptrsHybrid * ret = new WaveletTreeNoptrsHybrid();
+		ret->n = loadValue<size_t>(fp);
+		ret->length = ret->n;
+		ret->max_v = loadValue<uint>(fp);
+		ret->height = loadValue<uint>(fp);
+		ret->am = Mapper::load(fp);
+		if (ret->am == NULL) {
+			delete ret;
+			return NULL;
+		}
+		ret->am->use();
+		ret->bitstring = new BitSequence*[ret->height];
+		for(uint i = 0; i < ret->height; i++)
+			ret->bitstring[i] = NULL;
+		for(uint i = 0; i < ret->height; i++) {
+			ret->bitstring[i] = BitSequence::load(fp);
+			if (ret->bitstring[i] == NULL) {
+				delete ret;
+				return NULL;
+			}
+		}
+		ret->OCC = loadValue<uint>(fp, ret->max_v + 2);
+		return ret;
+	}
+
+	inline uint get_start(uint symbol, uint mask) {
+		return symbol & mask;
+	}
+
+	inline uint get_end(uint symbol, uint mask) {
+		return get_start(symbol, mask) + ~mask + 1;
+	}
+
+	bool WaveletTreeNoptrsHybrid::is_set(uint val, uint ind) const
+	{
+		assert (ind < height);
+		return (val & (1 << (height - ind - 1))) != 0;
+	}
+
+	uint WaveletTreeNoptrsHybrid::access(size_t pos) const
+	{
+		uint ret = 0;
+		
+		size_t start = 0;
+		for (uint level = 0; level < height; level++) {
+			size_t optR, before = 0;
+			if (start > 0)
+				before = bitstring[level]->rank1(start - 1);
+			
+			if (bitstring[level]->access(pos, optR)) {
+				ret |= (1 << (height - level - 1));
+				pos = optR - 1 - before;
+				start = OCC[ret];
+				pos += start;
+			} else {
+				pos = optR - 1 + before;
+			}
+		}
+
+		return am->unmap(ret);
+	}
+
+	uint WaveletTreeNoptrsHybrid::access(size_t pos, size_t &r) const
+	{
+		uint ret = 0;
+
+		size_t start = 0;
+		for (uint level = 0; level < height; level++) {
+			size_t optR, before=0;
+			if (start > 0) 
+				before = bitstring[level]->rank1(start-1);
+			
+			if(bitstring[level]->access(pos, optR)) {
+				ret |= (1 << (height - level - 1));
+				r = optR - before;
+				start = OCC[ret];
+				pos = r - 1 + start;
+			}
+			else {
+				pos = optR - 1 + before;
+				r = pos + 1 - start;
+			}
+		}
+
+		return am->unmap(ret);
+	}
+
+	size_t WaveletTreeNoptrsHybrid::rank(uint symbol, size_t pos) const
+	{
+		symbol = am->map(symbol);;
+
+		size_t start = 0;
+		size_t count = 0;
+		
+		for(uint level = 0; level < height; level++) {
+			
+			uint masked = (symbol >> (height - level - 1)) << (height - level - 1);
+			
+			size_t before = 0;
+			if (start > 0)
+				before = bitstring[level]->rank1(start - 1);
+			
+			if (is_set(symbol, level)) {
+				count = bitstring[level]->rank1(pos) - before;
+				start = OCC[masked];
+				pos = count + start - 1;
+			} else {
+				count = pos - start + before - bitstring[level]->rank1(pos) + 1;
+				masked += (1 << (height - level - 1)); 
+				pos = count + start - 1;
+			}
+
+			if (count == 0) return 0;
+		}
+		return count;
+	}
+
+	int WaveletTreeNoptrsHybrid::trackUp(int pos, int symb, int l) {
+		uint mask = ((1u << height) - 2) << (height - l - 1);
+
+		for (int level = l; level >= 0; level--) {
+			size_t start = get_start(symb, mask);
+			// assert(level != l || start == symb);
+			start = OCC[start];
+
+			uint ones_start = 0;
+			if (start > 0)
+				ones_start = bitstring[level]->rank1(start - 1);
+
+			if (is_set(symb, level)) {
+				pos = bitstring[level]->select1(ones_start + pos) - start + 1;
+			} else {
+				pos = bitstring[level]->select0(start - ones_start + pos) - start + 1;
+			}
+
+			mask <<= 1;
+		}
+
+		// cout << "Result: " << pos - 1 << endl;
+		return pos - 1;
+	}
+
+	size_t WaveletTreeNoptrsHybrid::range(int i1, int i2, int j1, int j2, int leftb, int rightb, int symb, int level, vector<pair<int,int> > *res, bool addRes) {
+		if (leftb > j2 || rightb < j1) return 0;
+		
+		if (leftb >= j1 && rightb <= j2) {
+			if (addRes){
+				for (int i = i1; i <= i2; i++) {
+					pair<int,int> p;
+					p.first=symb;
+					p.second=trackUp(i + 1, symb, level - 1);
+					res->push_back(p);
+				}
+			}
+			
+			return (i2-i1+1);
+		}
+
+		if (level == (int)height) return 0;
+
+		// left side
+		int lc,rc;
+		int newleftb = symb;
+		int newrightb = (int)((uint)symb | (uint)((1u << (height - level - 1)) - 1));
+		int start = OCC[symb];
+		int before = 0;
+		if (start > 0)
+			before = bitstring[level]->rank0(start - 1);
+		int r0i1ps = ((i1 + start > 0) ? bitstring[level]->rank0(i1 + start - 1) : 0);
+		int newi1 = r0i1ps - before;
+		int r0i2ps = bitstring[level]->rank0(start + i2);
+		int newi2 =  r0i2ps - before - 1;
+		
+		lc=0;rc=0;
+		
+		if (newi1 <= newi2) {
+			lc=range(newi1, newi2, j1, j2, newleftb, newrightb, symb, level + 1, res,addRes);
+		}
+
+		// right side
+		newleftb = (int)((uint)symb | (1u << (height - level - 1)));
+		newrightb = (int)((uint)symb | ((1u << (height - level)) - 1));
+		before = start - before;
+		newi1 = (i1 + start - r0i1ps) - before;
+		newi2 = (start + i2 - r0i2ps + 1) - before - 1;
+
+		if (newi1 <= newi2) {
+			rc=range(newi1, newi2, j1, j2, newleftb, newrightb, newleftb, level + 1, res,addRes);
+		}
+		return lc+rc;
+	}
+
+	size_t WaveletTreeNoptrsHybrid::rangeCount(size_t xs, size_t xe, uint ys, uint ye){
+		assert(ye>=ys);
+		int yss = am->map(ys);
+		int yee = am->map(ye);
+		return range((int)xs,(int)xe,yss,yee,0,max_v,0,0,(vector<pair<int,int> >*)NULL,false);
+	}
+	
+	void WaveletTreeNoptrsHybrid::range(int i1, int i2, int j1, int j2, vector<pair<int,int> > *res){
+		assert(i2>=i1);
+		int yss = am->map(j1);
+		int yee = am->map(j2);
+		range(i1,i2,yss,yee,0,max_v,0,0,res,true);
+	}
+	
+	size_t WaveletTreeNoptrsHybrid::select(uint symbol, size_t j) const
+	{
+		symbol = am->map(symbol);
+		
+		uint mask = (1 << height) - 2;
+		uint sum = 2;
+		
+		size_t pos = j;
+
+		for (int level = height - 1; level >= 0; level--) {
+			
+			size_t start = get_start(symbol, mask);
+			start = OCC[start];
+
+			uint ones_start = 0;
+			if (start > 0)
+				ones_start = bitstring[level]->rank1(start - 1);
+
+			if (is_set(symbol,level)) {
+				pos = bitstring[level]->select1(ones_start + pos) - start + 1;
+			} else {
+				pos = bitstring[level]->select0(start - ones_start + pos) - start + 1;
+			}
+
+			mask <<= 1;
+			sum <<= 1;
+		}
+
+		return pos - 1;
+	}
+
+	size_t WaveletTreeNoptrsHybrid::getSize() const
+	{
+		size_t ptrs = sizeof(WaveletTreeNoptrsHybrid) + height * sizeof(Sequence*);
+		size_t bytesBitstrings = 0;
+		for(uint i = 0; i < height; i++)
+			bytesBitstrings += bitstring[i]->getSize();
+		unsigned long long totalL = 0;
+		cout << "height: " << height << endl;
+		for(uint i = 0; i < height; i++){
+			totalL += bitstring[i]->getLength();
+			//~ cout << "len[" << i << "]: " << bitstring[i]->getLength() << endl;
+		}
+			cout << "Length in bits: " << totalL << endl <<"bmpSize: " << bytesBitstrings << endl; 
+		return bytesBitstrings + sizeof(uint) * (max_v + 2) + ptrs;
+	}
+
+	void WaveletTreeNoptrsHybrid::build_level(uint **bm, uint *symbols, uint level, uint length, uint offset) {
+		if (level == height) {
+			delete [] symbols;
+			return;
+		}
+		if (level==levelDriller){
+			uint mask=(1<<(height-levelDriller))-1;
+			for (size_t i=0;i<length;i++){
+				driller[pDriller++]=(symbols[i]&mask);
+			}
+		}
+		uint cleft = 0;
+		for (size_t i = 0; i < length; i++)
+			if (!is_set(symbols[i],level))
+				cleft++;
+
+		uint cright = length - cleft;
+
+		uint *left = new uint[cleft];
+		uint *right = new uint[cright];
+		cleft = cright = 0;
+		for (size_t i = 0; i < length; i++) {
+			if (!is_set(symbols[i], level)) {
+				left[cleft++] = symbols[i];
+				bitclean(bm[level], offset + i);
+			} else {
+				right[cright++] = symbols[i];
+				bitset(bm[level], offset + i);
+			}
+		}
+
+		delete [] symbols;
+		symbols = NULL;
+
+		build_level(bm, left, level + 1, cleft, offset);
+		left = NULL;			 // Gets deleted in recursion.
+		build_level(bm, right, level + 1, cright, offset + cleft);
+		right = NULL;			 // Gets deleted in recursion.
+	}
+
+	// symbols is an array of elements of "width" bits.
+	void WaveletTreeNoptrsHybrid::build_level(uint **bm, uint *symbols, unsigned width, uint level, uint length, uint offset) {
+		if (level == height) {
+			delete [] symbols;
+			return;
+		}
+
+		uint cleft = 0;
+		for (size_t i = 0; i < length; i++)
+			if (!is_set(get_field(symbols, width, i), level))
+				cleft++;
+
+		uint cright = length - cleft;
+		
+		uint *left = new uint[(cleft * width) / W + 1];
+		uint *right = new uint[(cright * width) / W + 1];
+		cleft = cright = 0;
+		for (size_t i = 0; i < length; i++) {
+			if (!is_set(get_field(symbols, width, i), level)) {
+				set_field(left, width, cleft++, get_field(symbols, width, i));
+				bitclean(bm[level], offset + i);
+			}
+			else {
+				set_field(right, width, cright++, get_field(symbols, width, i));
+				bitset(bm[level], offset + i);
+			}
+		}
+
+		delete [] symbols;
+		symbols = NULL;
+
+		build_level(bm, left, width, level + 1, cleft, offset);
+		left = NULL;			 // Gets deleted in recursion.
+		build_level(bm, right, width, level + 1, cright, offset + cleft);
+		right = NULL;			 // Gets deleted in recursion.
+	}
+
+	uint WaveletTreeNoptrsHybrid::max_value(uint *symbols, size_t n) {
+		uint max_v = 0;
+		for (size_t i = 0; i < n; i++)
+			max_v = max(symbols[i], max_v);
+		return max_v;
+	}
+
+	uint WaveletTreeNoptrsHybrid::max_value(uint *symbols, unsigned width, size_t n) {
+		uint max_v = 0;
+		for (size_t i = 0; i < n; i++)
+			max_v = max(get_field(symbols, width, i), max_v);
+		return max_v;
+	}
+
+	uint WaveletTreeNoptrsHybrid::bits(uint val) {
+		uint ret = 0;
+		while (val!=0) {
+			ret++;
+			val >>= 1;
+		}
+		return ret;
+	}
+
+	size_t WaveletTreeNoptrsHybrid::count(uint symbol) const
+	{
+		uint mapped = am->map(symbol);
+		return OCC[mapped + 1] - OCC[mapped] + 1;
+	}
+
+	uint WaveletTreeNoptrsHybrid::quantile(size_t left,size_t right,uint q) {
+		pair<uint,size_t> res = quantile_freq(left,right,q);
+		return res.first;
+	}
+
+	pair<uint32_t,size_t> WaveletTreeNoptrsHybrid::quantile_freq(size_t left,size_t right,uint q) {
+		/* decrease q as the smallest element q=1 is
+		 * found by searching for 0 */
+		q--;
+
+		assert( right >= left );
+		assert( (right-left+1) >= q );
+		assert( right < length );
+
+		uint sym = 0;
+		uint freq = 0;
+		uint level = 0;
+		size_t start = 0, end = n-1;
+		size_t before;
+		BitSequence* bs;
+
+		while(level<height) {
+			bs = bitstring[level];
+
+			/* calc start of level bound */
+			if(start == 0) before = 0;
+			else before = bs->rank1(start-1);
+
+			/* number of 1s before T[l..r] */
+			size_t rank_before_left = bs->rank1(start+left-1);
+			/* number of 1s before T[r] */
+			size_t rank_before_right = bs->rank1(start+right);
+			/* number of 1s in T[l..r] */
+			size_t num_ones = rank_before_right - rank_before_left;
+			/* number of 0s in T[l..r] */
+			size_t num_zeros = (right-left+1) - num_ones;
+
+			/* if there are more than q 0s we go right. left otherwise */
+			if(q >= num_zeros) { /* go right */
+				freq = num_ones; /* calc freq */
+				/* set bit to 1 in sym */
+				sym = 1 << (height - level - 1); //set(sym,level);
+				/* number of 1s before T[l..r] within the current node */
+				left = rank_before_left - before;
+				/* number of 1s in T[l..r] */
+				right = rank_before_right - before - 1;
+				q = q - num_zeros;
+				/* calc starting pos of right childnode */
+				start = end - (bs->rank1(end)-before) + 1;
+			}					 /* go left q = q // sym == sym */
+			else {
+				freq = num_zeros;/* calc freq */
+				/* number of zeros before T[l..r] within the current node */
+				left = left - (rank_before_left - before);
+				/* number of zeros in T[l..r] + left bound */
+				right = right - (rank_before_right - before);
+				/* calc end pos of left childnode */
+				end = end - (bs->rank1(end) - before);
+			}
+			level++;
+		}
+
+		/* unmap symbol */
+		return pair<uint,size_t>(am->unmap(sym),static_cast<uint>(freq));
+	}
+
+
+};

@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <hutucker.h>
+
+int main(int argc, char **argv){
+	
+	  BitString *bsf = create_BitString(100); 
+	  free(bsf); 
+	  //~ bits_F(5); 
+	  	int freqs[6];
+	freqs[0] = 2;
+	freqs[1] = 3;
+	freqs[2] = 1;
+	freqs[3] = 1;
+	freqs[4] = 3;
+	freqs[5] = 2;
+	  huTucker *ht = createHuTucker( freqs, 6);
+	  printHuTucker(*ht); 
+	  freeHutucker(&ht); 
+	exit(0); 
+}

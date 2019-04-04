@@ -1,0 +1,31 @@
+
+
+
+#~ CPPFLAGS=-O0 -g
+#~ CPP=g++
+#~ 
+#~ all: irepair 
+#~ 
+#~ irepair: irepair.o array.o hash.o heap.o records.o basicsRepair.o 
+	#~ $(CPP) $(CPPFLAGS) -o irepair irepair.o array.o hash.o heap.o records.o basicsRepair.o
+#~ 
+#~ irepair.o: irepair.cpp array.h hash.h heap.h records.h basicsRepair.h 
+	#~ $(CPP) $(CPPFLAGS) -c irepair.cpp
+#~ 
+#~ array.o: array.cpp array.h hash.h heap.h records.h basicsRepair.h 
+	#~ $(CPP) $(CPPFLAGS) -c array.cpp
+#~ 
+#~ hash.o: hash.cpp array.h hash.h heap.h records.h basicsRepair.h 
+	#~ $(CPP) $(CPPFLAGS) -c hash.cpp
+#~ 
+#~ heap.o: heap.cpp array.h hash.h heap.h records.h basicsRepair.h 
+	#~ $(CPP) $(CPPFLAGS) -c heap.cpp
+#~ 
+#~ records.o: records.cpp array.h hash.h heap.h records.h basicsRepair.h 
+	#~ $(CPP) $(CPPFLAGS) -c records.cpp
+#~ 
+#~ basicsRepair.o: basicsRepair.cpp basicsRepair.h 
+	#~ $(CPP) $(CPPFLAGS) -c basicsRepair.cpp
+#~ 
+#~ toint: toint.cpp 
+	#~ $(CPP) $(CPPFLAGS) -o toint toint.cpp

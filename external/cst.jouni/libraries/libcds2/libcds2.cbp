@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="libcds2"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\libraries\;CMake Files\libraries\TextIndexes\;CMake Files\libraries\libcds2\;CMake Files\libraries\intSA\;CMake Files\libraries\gtest-1.7.0\;CMake Files\libraries\gtest-1.7.0\cmake\;CMake Files\cst_rep\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="InBuffer">
+				<Option output="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/InBuffer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_LARGEFILE_SOURCE"/>
+					<Add option="-D_LARGE_FILES"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/includes"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../libdivsufsort-2.0.1/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 InBuffer"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="InBuffer/fast">
+				<Option output="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/InBuffer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_LARGEFILE_SOURCE"/>
+					<Add option="-D_LARGE_FILES"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/includes"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../libdivsufsort-2.0.1/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 InBuffer/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="testSequences">
+				<Option output="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/testSequences" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_LARGEFILE_SOURCE"/>
+					<Add option="-D_LARGE_FILES"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/includes"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../libdivsufsort-2.0.1/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 testSequences"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="testSequences/fast">
+				<Option output="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/testSequences" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_LARGEFILE_SOURCE"/>
+					<Add option="-D_LARGE_FILES"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/includes"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../libdivsufsort-2.0.1/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 testSequences/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="testBWTBuilder">
+				<Option output="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/testBWTBuilder" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_LARGEFILE_SOURCE"/>
+					<Add option="-D_LARGE_FILES"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/includes"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../libdivsufsort-2.0.1/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 testBWTBuilder"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="testBWTBuilder/fast">
+				<Option output="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/testBWTBuilder" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_LARGEFILE_SOURCE"/>
+					<Add option="-D_LARGE_FILES"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/includes"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../libdivsufsort-2.0.1/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 testBWTBuilder/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cds">
+				<Option output="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/libcds.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_LARGEFILE_SOURCE"/>
+					<Add option="-D_LARGE_FILES"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/includes"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../libdivsufsort-2.0.1/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 cds"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cds/fast">
+				<Option output="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/libcds.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_LARGEFILE_SOURCE"/>
+					<Add option="-D_LARGE_FILES"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/includes"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../libdivsufsort-2.0.1/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 cds/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BitStreamTests">
+				<Option output="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/BitStreamTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_LARGEFILE_SOURCE"/>
+					<Add option="-D_LARGE_FILES"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/includes"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../libdivsufsort-2.0.1/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 BitStreamTests"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BitStreamTests/fast">
+				<Option output="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/BitStreamTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_LARGEFILE_SOURCE"/>
+					<Add option="-D_LARGE_FILES"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/includes"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../libdivsufsort-2.0.1/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 BitStreamTests/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="testGenericMapper">
+				<Option output="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/testGenericMapper" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_LARGEFILE_SOURCE"/>
+					<Add option="-D_LARGE_FILES"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/includes"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../libdivsufsort-2.0.1/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 testGenericMapper"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="testGenericMapper/fast">
+				<Option output="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/testGenericMapper" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_LARGEFILE_SOURCE"/>
+					<Add option="-D_LARGE_FILES"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/includes"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../libdivsufsort-2.0.1/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 testGenericMapper/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sssTest">
+				<Option output="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/sssTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_LARGEFILE_SOURCE"/>
+					<Add option="-D_LARGE_FILES"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/includes"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../libdivsufsort-2.0.1/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 sssTest"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sssTest/fast">
+				<Option output="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/sssTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_LARGEFILE_SOURCE"/>
+					<Add option="-D_LARGE_FILES"/>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/includes"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../gtest-1.7.0/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../lzisa/include"/>
+					<Add directory="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/../libdivsufsort-2.0.1/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 sssTest/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/includes/sequence/MappingTableAcelerators.h">
+			<Option target="InBuffer"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/includes/utils/BitStreamIterator.h">
+			<Option target="InBuffer"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/BitSequence.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/BitSequenceBRW32.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/BitSequenceBuilderDArray.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/BitSequenceBuilderDelta.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/BitSequenceBuilderPlain.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/BitSequenceBuilderRG.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/BitSequenceBuilderRPSC.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/BitSequenceBuilderRPSN.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/BitSequenceBuilderRRR.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/BitSequenceBuilderSDArray.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/BitSequenceDArray.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/BitSequenceDelta.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/BitSequencePlain.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/BitSequenceRG.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/BitSequenceRPSC.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/BitSequenceRPSN.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/BitSequenceRRR.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/BitSequenceSDArray.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/TableOffsetRRR.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/bitsequence/sdarraySadakane.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/coders/HuffmanCoder.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/coders/huff.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/direct_access/ArrayDA.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/direct_access/DAC.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/direct_access/DACInc.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/direct_access/DACe.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/direct_access/DirectAccess.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/grammar/DictionaryRP.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/grammar/Repair.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/grammar/RepairDN.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/grammar/array.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/grammar/basicsRepair.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/grammar/hash.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/grammar/heap.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/grammar/records.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/mapper/Mapper.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/mapper/MapperCont.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/mapper/MapperNone.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/mapper/MapperRev.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/permutation/Permutation.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/permutation/PermutationBuilderMRRR.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/permutation/PermutationBuilderWT.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/permutation/PermutationMRRR.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/permutation/PermutationWT.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/permutation/perm.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/rmq/RMQ.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/rmq/RMQ.h">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/rmq/RMQ_succinct.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/rmq/RMQ_succinct.h">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/BitmapsSequence.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/CanonicalWTNoptrs.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/MappingPermutations.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/MappingSymbols.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/MappingTable.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/MappingWM.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/MappingWMBMP.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/MappingWMBS.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/MappingWMBSBuilder.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/MappingWMBSC.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/MappingWMBSCBuilder.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/MappingWMBlocks.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/MappingWMBlocksBuilder.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/MultiArityCoderFixed.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/MultiArityInternalNode.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/MultiArityLeafNode.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/MultiArityNode.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/MultiArityWT.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/MultiArityWTHelper.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/Sequence.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceAlphPart.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceAlphPartRep.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceAlphPartRepReg.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceBinary.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceBuilderAlphPart.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceBuilderAlphPartRep.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceBuilderBinary.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceBuilderCanonicalWTNoptrs.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceBuilderGMR.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceBuilderGMRChunk.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceBuilderSequenceMatrix.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceBuilderSequenceRepairSC.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceBuilderSequenceRepairSN.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceBuilderSequenceWTRP.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceBuilderStr.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceBuilderWTNoptrsHybrid.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceBuilderWaveletMatrix.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceBuilderWaveletMatrixHuff.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceBuilderWaveletTree.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceBuilderWaveletTreeNoptrs.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceGMR.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceGMRChunk.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceLZEndBase.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceMatrix.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceRepair.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceRepairSC.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceRepairSN.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/SequenceWTRP.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/Tuple.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/WaveletMatrix.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/WaveletMatrixHuff.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/WaveletTree.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/WaveletTreeNoptrs.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/WaveletTreeNoptrsHybrid.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/htwt/HuTuckerPermPtrs.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/htwt/PermWT.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/htwt/hu-tucker/basicsHT.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/htwt/hu-tucker/binarynode.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/htwt/hu-tucker/bitStringHT.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/htwt/hu-tucker/hutucker.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/htwt/huTuckerNode.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/htwt/huTuckerPerm.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/wt_coder.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/wt_coder_Balanced.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/wt_coder_Pmin.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/wt_coder_SubOptimalAdd.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/wt_coder_SubOptimalMult.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/wt_coder_Suboptimal.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/wt_coder_binary.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/wt_coder_huff.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/wt_coder_huff_can.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/wt_coder_hutucker.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/wt_node.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/wt_node_internal.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/sequence/wt_node_leaf.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/text_indexes/BWTBuilder.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/text_indexes/fmi.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/trees/BP.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/trees/BPNaive.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/trees/CartesianTree.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/trees/GCT.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/trees/Parentheses.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/trees/bp-core.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/trees/bp-darray.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/trees/bp-utils.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/static/trees/bp.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/utils/Array.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/utils/BitString.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/utils/StringUtils.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/utils/Tuples.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/utils/cppUtils.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/src/utils/timing.cpp">
+			<Option target="cds"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/tests/InBuffer.cpp">
+			<Option target="InBuffer"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/tests/testBWTBuilder.cpp">
+			<Option target="testBWTBuilder"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/tests/testGenericMapper.cpp">
+			<Option target="testGenericMapper"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/tests/testSequences.cpp">
+			<Option target="testSequences"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/tests/utils/BitStreamTests.cpp">
+			<Option target="BitStreamTests"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/tests/utils/TestSparseSuffixSort.cpp">
+			<Option target="sssTest"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/TextIndexes/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libraries\TextIndexes\"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/libcds2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libraries\libcds2\"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/intSA/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libraries\intSA\"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/gtest-1.7.0/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libraries\gtest-1.7.0\"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/libraries/gtest-1.7.0/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\libraries\gtest-1.7.0\cmake\"/>
+		</Unit>
+		<Unit filename="/home/elarielcl/Downloads/cst.jouni/cst.jouni/cst_rep/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cst_rep\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
