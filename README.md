@@ -23,5 +23,25 @@ make
 ```
 
 Finally when you want to create a new executable, you need to add it to the experiments/CMakeLists.txt as part of the project_EXECUTABLES environment variable, where the experiments are located.
-# Contact
-Any error, improvement or suggestion you can write me to `elarielcl` in Gmail. 
+
+
+# Usage Guide
+ On the experiments folder you can find some examples of executables using the implemented Structures.
+ ## Example Block Tree Compressed Suffix Tree
+ Let's suppose we want to build our Compressed Suffix Tree using the Block Tree Compressed Topology, BT-CST so we do:
+ ```
+ ...
+ int r = 2; //The arity of the BlockTree
+ int mll = 128; // The max length that a BlockTree's leaf could represent
+ 
+ PBTRLCSACST * cst = new PBTRLCSACST(input_string, PBTRLCSACST.PAPER, r, mll, c);
+ ...
+ cst->suffix_link((cst->lca(pbtrlcsacst->select_leaf(l1), pbtrlcsacst->select_leaf(l2))) 
+ ...
+ ```
+ in case you want to build the BT-CST-LCSA-NONE version instead you can replace the the construction line by
+ ```
+PBTLCSACST * cst = new PBTLCSACST(input_string, PBTLCSACST.PAPER, r, mll, c);
+ ```
+ # Contact
+ Any error, improvement or suggestion you can write me to `elarielcl` in Gmail. 
