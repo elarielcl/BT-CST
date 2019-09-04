@@ -8,7 +8,7 @@ First clone the repo with its submodule:
  ```
  This project uses the [sdsl](https://github.com/elarielcl/sdsl-lite) library, so previous to compile it you should install the [sdsl](https://github.com/elarielcl/sdsl-lite). To install it:
  ```
- cd BlockTrees/external/sdsl-lite
+ cd BT-CST/external/sdsl-lite
  ./install.sh .
  ```
  
