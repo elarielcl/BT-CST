@@ -1,3 +1,5 @@
+<span>This repository contains all the variants of BlockTrees described in the experimental study available [here](https://users.dcc.uchile.cl/~gnavarro/mem/algoritmos/tesisManuel.pdf). If you are looking for the cannonical versions used in the journal article, which is also more reusable and uses less contruction space, you can go to [https://github.com/elarielcl/MinimalistBlockTrees/](https://github.com/elarielcl/MinimalistBT-CST/)</span>
+
 # BT-CST
 # Description
 This repository contains the implementation of the algorithms and structures described at [https://arxiv.org/abs/1902.03274](https://arxiv.org/abs/1902.03274). In addition to the paper's proposal, this code contains some new approaches to appear in the thesis of Manuel Cáceres.
