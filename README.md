@@ -1,4 +1,5 @@
-<span>This repository contains all the variants of BlockTrees described in the experimental study available [here](https://users.dcc.uchile.cl/~gnavarro/mem/algoritmos/tesisManuel.pdf). If you are looking for the cannonical versions used in the journal article, which is also more reusable and uses less contruction space, you can go to [https://github.com/elarielcl/MinimalistBlockTrees/](https://github.com/elarielcl/MinimalistBT-CST/)</span>
+<span>This repository contains all the variants of the BT-CST data structure described [here](https://link.springer.com/chapter/10.1007/978-3-030-32686-9_31). If you are looking for the cannonical versions, which are also more reusable and uses less contruction space, you can go to [https://github.com/elarielcl/MinimalistBT-CST/](https://github.com/elarielcl/MinimalistBT-CST/)</span>
+
 
 # BT-CST
 # Description
